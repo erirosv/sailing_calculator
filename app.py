@@ -18,7 +18,7 @@ def calculate():
     normal_time = calculate_SRS(seconds, normal)
     fast_time = calculate_SRS(seconds, faster)
     
-    result = f"Normal: {normal_time}\nFast: {fast_time}"
+    result = f"Normal: {normal_time:.2f}\tFast: {fast_time:.2f}"
 
     return render_template('index.html', result=result)
 
@@ -34,7 +34,7 @@ def get_seconds(start_time, end_time):
         print('Error: convertion error')
 
 def calculate_SRS(seconds, param):
-    return seconds * param
+    return (seconds * param) / 3600
 
 if __name__ == '__main__':
     app.run(debug=True)

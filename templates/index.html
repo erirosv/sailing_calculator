@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Time Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+
+
+    <!--
+        <link rel="stylesheet" type="text/css" href="style.css">
+    -->
 </head>
 <body>
     <h1>Time Calculator</h1>
@@ -30,8 +36,20 @@
         <button type="submit">Calculate</button>
     </form>
 
+    <br>
+
     <div id="result">
         {{ result }}
     </div>
+
+    <script>
+        function resetInputs() {
+            document.getElementById("start_time").value = "";
+            document.getElementById("end_time").value = "";
+            document.getElementById("normal_setup").value = "";
+            document.getElementById("extra").value = "";
+        }
+    </script>
+
 </body>
 </html>
